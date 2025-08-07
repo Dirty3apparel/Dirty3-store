@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dirty3 Apparel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <header>
+    <h1>Dirty3 Apparel</h1>
+    <nav>
+      <ul>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="collection">
+    <h2>Shop the Drop</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/shirt1.jpg" alt="Signal Jammer Tee" />
+        <h3>Signal Jammer Tee</h3>
+        <p>$45</p>
+        <button onclick="addToCart('prod_signal_jammer')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/hoodie1.jpg" alt="Echo Chamber Hoodie" />
+        <h3>Echo Chamber Hoodie</h3>
+        <p>$75</p>
+        <button onclick="addToCart('prod_echo_chamber')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Visuals from the Underground</h2>
+    <video controls width="100%">
+      <source src="videos/lookbook.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <button id="checkout-button">Checkout with Stripe</button>
+  </section>
+
+  <section id="contact">
+    <h2>Join the Movement</h2>
+    <form>
+      <input type="email" placeholder="Your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dirty3 Apparel. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
